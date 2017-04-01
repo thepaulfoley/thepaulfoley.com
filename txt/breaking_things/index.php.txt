@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+
+
+
+
+<title>
+Welcome to Example.com
+</title>
+</head>
+
+<body>
+
+<h1>Welcome! Please sign in below.</h1>
+<br/>
+<br/>
+<?php 
+if(isset($_GET["fail"]))
+	echo "<div style='color:red'>The username or password you entered is incorrect.</div>";
+else 
+	echo "<br/>";
+?>
+
+<form action="login.php" method="post">
+<div style="float:left;">Username:</div> 
+<input type="text" size="20"  name="usernameInput" /><br/>
+<div style="float:left;">Passwoord:</div>
+<input type="password" size="20" name="passwordInput" /><br/><br/>
+<div style="width:250px;text-align:center">
+<input type="submit" value="Log in" />
+</div>
+</form>
+ 
+
+
+</body>
+
+</html>
